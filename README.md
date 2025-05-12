@@ -15,7 +15,7 @@ Sylius AI Search
     </a>
 </h1>
 
-<img src="/capture.gif">
+<img src="public/capture.gif">
 <p>Use AI to improve eShop experience</p>
 
 ## Installation
