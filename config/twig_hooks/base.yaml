@@ -1,0 +1,6 @@
+sylius_twig_hooks:
+    hooks:
+        'sylius_shop.base.header.content.security.visitor.desktop':
+            search:
+                template: 'shared/layout/base/header/search.html.twig'
+                priority: -100

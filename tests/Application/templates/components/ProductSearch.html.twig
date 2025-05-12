@@ -1,0 +1,47 @@
+{% import '@SyliusShop/shared/messages.html.twig' as messages %}
+
+<div {{ attributes }} class="ai-form-container mt-4">
+    <div class="ai-form-query-section mb-5">
+        <div class="mb-4">
+            <label for="ai_query" class="form-label fs-4 fw-semibold text-dark">What are you looking for?</label>
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="ai_query"
+                    name="ai_query"
+                    class="form-control form-control-lg"
+                    placeholder="Example: 'I am looking for an elegant red dress for women in size M'"
+                    value="{{ this.aiQuery }}"
+                    data-model="aiQuery"
+                >
+                <button
+                    class="btn btn-outline-primary btn-lg"
+                    data-live-action-param="processAiQuery"
+                    data-action="live#action"
+                >
+                    {{ ux_icon('tabler:wand', {'class': 'icon mx-0'}) }}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <div class="row">
+        <div class="col-12 col-lg-12">
+            {% if this.errorMessage %}
+                {{ messages.error(this.errorMessage) }}
+            {% else %}
+                {% if products|length > 0 %}
+                    <div class="products-grid">
+                        {% for product in products %}
+                            {{ component('sylius_shop:product:card', { product: product, template: '@SyliusShop/product/common/card.html.twig' }) }}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ messages.info('sylius.ui.no_results_to_display') }}
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: ACSEO\SyliusAISearchPlugin
+        psr4_prefix: ACSEO\SyliusAISearchPlugin

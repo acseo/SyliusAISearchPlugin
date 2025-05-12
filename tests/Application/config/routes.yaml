@@ -1,0 +1,2 @@
+acseo_sylius_ai_search:
+    resource: "@ACSEOSyliusAISearchPlugin/config/routes.yaml"

@@ -1,0 +1,8 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: ACSEO\SyliusAISearchPlugin\Controller
+    type: attribute
+
+_live_component:
+    resource: 'routes/ux_live_component.yaml'

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+           https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="locale">en</parameter>
+        <parameter key="llm_model">%env(LLM_MODEL)%</parameter>
+        <parameter key="llm_max_tokens">%env(int:LLM_MAX_TOKENS)%</parameter>
+        <parameter key="llm_base_url">%env(LLM_BASE_URL)%</parameter>
+        <parameter key="openai_api_key">%env(OPENAI_API_KEY)%</parameter>
+        <parameter key="openai_organization">%env(OPENAI_ORGANIZATION)%</parameter>
+    </parameters>
+</container>

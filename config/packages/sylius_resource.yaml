@@ -1,0 +1,10 @@
+sylius_resource:
+    mapping:
+        paths:
+            - '%kernel.project_dir%/src/Entity'
+
+sylius_product:
+    resources:
+        product:
+            classes:
+                repository: ACSEO\SyliusAISearchPlugin\Repository\ProductRepository
